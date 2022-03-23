@@ -20,6 +20,7 @@ request("https://www.reddit.com/r/popular.json")
     //console.log(articles);
     let filePath = path.join(__dirname, 'popular-articles.json');
     fs.writeFileSync(filePath, JSON.stringify(articles));
-    });
+    })
+    .catch(error => console.log(error));
 
 
